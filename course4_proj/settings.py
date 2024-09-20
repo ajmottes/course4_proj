@@ -152,3 +152,7 @@ class Dev(Configuration):
     # settings for Celery
     CELERY_RESULT_BACKEND = "django-db"
     CELERY_BROKER_URL = "redis://localhost:6379/0"
+
+    # use console email backend during development
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    ADMINS = [("admin", "ajmottes@gmail.com")]
